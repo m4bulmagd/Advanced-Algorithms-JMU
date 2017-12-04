@@ -2,7 +2,7 @@ import csv
 from datetime import datetime
 
 
-csvfile = open("C:\\Users\\murad\\PycharmProjects\\testproject\\export_1512164163.csv")
+csvfile = open("C:\\_____\\___\\export_1512164163.csv")
 data=csv.reader(csvfile)
 for row in data:
     x=list(data)
