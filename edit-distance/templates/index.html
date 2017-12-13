@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>HEY</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+        .container {
+            max-width: 500px;
+            padding-top: 20px;
+        }
+
+        input {
+            max-width: 250px;
+        }
+
+        .avatar {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>GitMatched</h1>
+    <br>
+    <!-- <img src="http://127.0.0.1:5000/graph"> -->
+    <form role="form" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" name="first" placeholder={{ first }} value required>
+            <input type="text" class="form-control" name="second" placeholder={{ second }} required>
+        </div>
+        <button type="submit" class="btn btn-primary">compute!</button>
+    </form>
+
+    <input type="text" class="form-control" name="edit1" placeholder={{ val_edDP }}>
+    <input type="text" class="form-control" name="edit2" placeholder={{ val_edR }}>
+    <input type="text" class="form-control" name="edit3" placeholder={{ val_edbb }}>
+    <input type="text" class="form-control" name="edit4" placeholder={{ val_edkDP }}>
+
+    <br>
+    <div id="results"></div>
+</div>
+{{ the_div |safe }}
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.13.min.js"></script>
+<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.13.min.js"></script>
+{{ the_script|safe }}
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src={{ url_for('static', filename='js/main.js') }}></script>
+</body>
+</html>
